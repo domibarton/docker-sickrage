@@ -1,0 +1,10 @@
+---
+sickrage:
+    build: .
+    container_name: 'sickrage'
+    volumes:
+        - './data/datadir:/datadir'
+        - './data/media:/media'
+    ports:
+        - 8081:8081
+    restart: 'always'
