@@ -19,7 +19,7 @@ RUN chmod 755 /sickrage.sh
 # Install SickRage and all required dependencies.
 #
 
-RUN export VERSION=v2016.10.28-1 \
+RUN export VERSION=v2017.01.10-1 \
     && apt-get -q update \
     && apt-get install -qy curl ca-certificates locales python-setuptools build-essential python-dev libssl-dev libxml2-dev libxslt-dev \
     && sed -i 's/^# \(en_GB\.UTF-8.*\)$/\1/' /etc/locale.gen \
@@ -40,9 +40,9 @@ RUN export VERSION=v2016.10.28-1 \
 # Define container settings.
 #
 
-ENV ENV LANG en_GB.UTF-8  
-ENV LANGUAGE en_GB:en 
-ENV LC_ALL en_GB.UTF-8   
+ENV ENV LANG en_GB.UTF-8
+ENV LANGUAGE en_GB:en
+ENV LC_ALL en_GB.UTF-8
 
 VOLUME ["/datadir", "/media"]
 
