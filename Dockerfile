@@ -19,7 +19,7 @@ RUN chmod 755 /sickrage.sh
 # Install SickRage and all required dependencies.
 #
 
-RUN export VERSION=v2017.01.10-1 \
+RUN export VERSION=v2017.05.23-1 \
     && apt-get -q update \
     && apt-get install -qy curl ca-certificates locales python-setuptools build-essential python-dev libssl-dev libxml2-dev libxslt-dev \
     && sed -i 's/^# \(en_GB\.UTF-8.*\)$/\1/' /etc/locale.gen \
