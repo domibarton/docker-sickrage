@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 #
@@ -32,7 +32,7 @@ echo "[DONE]"
 
 printf "Set permissions... "
 touch ${CONFIG}
-chown -R ${USER}: /sickrage
+chown -R ${USER}: /opt/sickrage
 chown ${USER}: /datadir /media $(dirname ${CONFIG}) ${CONFIG}
 echo "[DONE]"
 
@@ -41,4 +41,4 @@ echo "[DONE]"
 #
 
 echo "Starting SickRage..."
-exec su -pc "./SiCKRAGE.py --nolaunch --datadir=$(dirname ${CONFIG}) --config=${CONFIG}" ${USER}
+exec su -pc "/usr/local/bin/python SiCKRAGE.py --nolaunch --datadir=$(dirname ${CONFIG}) --config=${CONFIG}" ${USER}

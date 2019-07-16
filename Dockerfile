@@ -6,7 +6,7 @@ MAINTAINER Dominique Barton
 #
 
 RUN addgroup -S -g 666 sickrage \
-    && adduser -S -u 666 -g 666 -h /sickrage sickrage
+    && adduser -S -u 666 -g 666 -h /opt/sickrage sickrage
 
 #
 # Add SickRage init script.
@@ -31,6 +31,6 @@ EXPOSE 8081
 # Start SickRage.
 #
 
-WORKDIR /sickrage
+WORKDIR /opt/sickrage
 
-CMD ["/sickrage.sh"]
+ENTRYPOINT ["/sickrage.sh"]
