@@ -27,7 +27,7 @@ RUN export VERSION=9.4.138 \
     && easy_install pip \
     && curl -o /tmp/sickrage.tar.gz https://codeload.github.com/SickRage/SickRage/tar.gz/${VERSION} \
     && tar xzf /tmp/sickrage.tar.gz \
-    && mv SickRage-* sickrage \
+    && mv SiCKRAGE-* sickrage \
     && chown -R sickrage: sickrage \
     && pip install lxml pyOpenSSL \
     && apt-get -y remove curl build-essential python-dev libssl-dev libxml2-dev libxslt-dev \
