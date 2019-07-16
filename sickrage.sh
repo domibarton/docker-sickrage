@@ -41,4 +41,4 @@ echo "[DONE]"
 #
 
 echo "Starting SickRage..."
-exec su -pc "./SickBeard.py --nolaunch --datadir=$(dirname ${CONFIG}) --config=${CONFIG}" ${USER}
+exec su -pc "./SiCKRAGE.py --nolaunch --datadir=$(dirname ${CONFIG}) --config=${CONFIG}" ${USER}
