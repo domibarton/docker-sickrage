@@ -5,7 +5,8 @@ MAINTAINER Dominique Barton
 # Create user and group for SickRage.
 #
 
-RUN addgroup -S -g 666 sickrage \
+RUN apk --no-cache add shadow \
+    && addgroup -S -g 666 sickrage \
     && adduser -S -u 666 -g 666 -h /opt/sickrage sickrage
 
 #
